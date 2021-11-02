@@ -34,9 +34,9 @@ from userge.utils import get_response
             "{tr}kang",
             "{tr}kang -s",
             "{tr}kang -d",
-            "{tr}kang 🤔",
+            "{tr}kang 😇",
             "{tr}kang 2",
-            "{tr}kang 🤔 2",
+            "{tr}kang 😇 2",
         ],
     },
     allow_channels=False,
@@ -89,12 +89,12 @@ async def kang_(message: Message):
         ):
             emoji_ = None
         if not emoji_:
-            emoji_ = "🤔"
+            emoji_ = "😇"
 
         u_name = user.username
         u_name = "@" + u_name if u_name else user.first_name or user.id
         packname = f"a{user.id}_by_x_{pack}"
-        custom_packnick = Config.CUSTOM_PACK_NAME or f"{u_name}'s kang pack"
+        custom_packnick = f"@shamilnelli Sticker Pack"
         packnick = f"{custom_packnick} Vol.{pack}"
         cmd = "/newpack"
         if resize:
