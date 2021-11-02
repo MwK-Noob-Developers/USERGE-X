@@ -43,36 +43,35 @@ from .utils.notes import get_inote
 CHANNEL = userge.getCLogger(__name__)
 
 _CATEGORY = {
-    "admin": "🙋🏻‍♂️",
-    "fun": "🎨",
-    "misc": "🧩",
-    "tools": "🧰",
-    "utils": "🗂",
-    "xtra": "➕",
-    "temp": "♻️",
-    "plugins": "💎",
-    "bot": "💠",
-    "custom": "🔧",
+    "admin": "⚜️",
+    "fun": "⚜️",
+    "misc": "⚜️",
+    "tools": "⚜️",
+    "utils": "⚜️",
+    "xtra": "⚜️",
+    "temp": "⚜️",
+    "plugins": "⚜️",
+    "bot": "⚜️",
+    "custom": "⚜️",
 }
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
     title="Repo",
-    input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
-    url="https://github.com/code-rgb/USERGE-X",
-    description="Setup Your Own",
-    thumb_url="https://i.imgur.com/1xsOo9o.png",
+    input_message_content=InputTextMessageContent("**SML's Main Channel** "),
+    url="t.me/mwkbots",
+    description="MWK Projects",
+    thumb_url="https://telegra.ph/file/7cae88ff844aa49d9746c.jpg",
     reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "🔥 USERGE-X Repo", url="https://github.com/code-rgb/USERGE-X"
+                    "MWK PROJECTS", url="t.me/mwkbots"
                 ),
                 InlineKeyboardButton(
-                    "🚀 Deploy USERGE-X",
+                    "NEW OTT MOVIE CHANNEL",
                     url=(
-                        "https://heroku.com/deploy?template="
-                        "https://github.com/code-pms/MyGpack"
+                        " t.me/mwkott"
                     ),
                 ),
             ]
@@ -88,7 +87,7 @@ async def _init() -> None:
 
 
 @userge.on_cmd(
-    "help", about={"header": "Guide to use USERGE commands"}, allow_channels=False
+    "help", about={"header": "Here is How to Use Commands"}, allow_channels=False
 )
 async def helpme(message: Message) -> None:
     plugins = userge.manager.enabled_plugins
@@ -168,7 +167,7 @@ if userge.has_bot:
             else:
                 user_dict = await userge.bot.get_user_dict(Config.OWNER_ID[0])
                 await c_q.answer(
-                    f"Only {user_dict['flname']} Can Access this...! Build Your USERGE-X",
+                    f"Only {user_dict['flname']} Can Access this...! Build Your SMLxWINZO",
                     show_alert=True,
                 )
 
@@ -213,7 +212,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨"
+            text = "SMLs MainMenu"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
@@ -265,7 +264,7 @@ if userge.has_bot:
     @check_owner
     async def callback_mm(callback_query: CallbackQuery):
         await callback_query.edit_message_text(
-            " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 ",
+            "SMLs UB Menu",
             reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
         )
 
@@ -526,7 +525,7 @@ if userge.has_bot:
                 ]
                 results.append(
                     InlineQueryResultPhoto(
-                        photo_url="https://i.imgur.com/Zg58iXc.jpg",
+                        photo_url="https://telegra.ph/file/ffa8a4ac69d34c8b1de00.jpg",
                         caption="**ARE YOU OLD ENOUGH FOR THIS ?**",
                         reply_markup=InlineKeyboardMarkup(buttons),
                     )
@@ -553,7 +552,7 @@ if userge.has_bot:
                             input_message_content=InputTextMessageContent(
                                 "**Error Code: Status != 200**"
                             ),
-                            thumb_url="https://i.imgur.com/7a7aPVa.png",
+                            thumb_url="https://telegra.ph/file/ffa8a4ac69d34c8b1de00.jpg",
                         )
                     )
                 else:
@@ -638,7 +637,7 @@ if userge.has_bot:
                     if Config.ALIVE_MEDIA.lower().strip() == "false":
                         results.append(
                             InlineQueryResultArticle(
-                                title="USERGE-X",
+                                title="SML x WINZO",
                                 input_message_content=InputTextMessageContent(
                                     alive_info, disable_web_page_preview=True
                                 ),
@@ -688,7 +687,7 @@ if userge.has_bot:
                             else:
                                 results.append(
                                     InlineQueryResultCachedDocument(
-                                        title="USERGE-X",
+                                        title="SML x WINZO",
                                         file_id=c_file_id,
                                         caption=alive_info,
                                         description="ALIVE",
@@ -699,7 +698,7 @@ if userge.has_bot:
             if string == "geass":
                 results.append(
                     InlineQueryResultAnimation(
-                        animation_url="https://i.imgur.com/DeZHcRK.gif",
+                        animation_url="https://i.imgur.com/1xsOo9o.png",
                         caption="To defeat evil, I must become a greater evil",
                     )
                 )
@@ -756,10 +755,10 @@ if userge.has_bot:
                     InlineQueryResultArticle(
                         title="GApps",
                         input_message_content=InputTextMessageContent(
-                            "[\u200c](https://i.imgur.com/BZBMrfn.jpg) **LATEST Android 10 arm64 GApps**"
+                            "[\u200c](https://telegra.ph/file/7cae88ff844aa49d9746c.jpg) **LATEST Android 10 arm64 GApps**"
                         ),
                         description="Get Latest GApps Download Links Directly from SF",
-                        thumb_url="https://i.imgur.com/Npzw8Ph.png",
+                        thumb_url="https://telegra.ph/file/7cae88ff844aa49d9746c.jpg",
                         reply_markup=InlineKeyboardMarkup(buttons),
                     )
                 )
@@ -768,7 +767,7 @@ if userge.has_bot:
                 codename = string_split[1]
                 t = TelegraphPoster(use_api=True)
                 t.create_api_token("Userge-X")
-                photo = "https://i.imgur.com/582uaSk.png"
+                photo = "https://telegra.ph/file/7cae88ff844aa49d9746c.jpg"
                 api_host = "https://api.orangefox.download/v2/device/"
                 try:
                     async with get_response.get_session() as session:
@@ -806,8 +805,8 @@ if userge.has_bot:
                 results.append(
                     InlineQueryResultPhoto(
                         photo_url=photo,
-                        thumb_url="https://i.imgur.com/o0onLYB.jpg",
-                        title="Latest OFOX RECOVERY",
+                        thumb_url="https://telegra.ph/file/ef3e3e4c3965b2eb31ffa.jpg",
+                        title="Recovery",
                         description=f"For device : {codename}",
                         caption=msg,
                         reply_markup=InlineKeyboardMarkup(buttons),
@@ -831,7 +830,7 @@ if userge.has_bot:
                                 [
                                     [
                                         InlineKeyboardButton(
-                                            text="⬇️  Download",
+                                            text="Download",
                                             callback_data=f'get_eps{i.get("key")}',
                                         )
                                     ]
@@ -935,7 +934,7 @@ if userge.has_bot:
                         title="Ask For Opinion",
                         input_message_content=InputTextMessageContent(txt),
                         description=f"Q. {txt}",
-                        thumb_url="https://i.imgur.com/Zlc98qS.jpg",
+                        thumb_url="https://telegra.ph/file/209a9f1bfdf83ef7b5f05.jpg",
                         reply_markup=InlineKeyboardMarkup(buttons),
                     )
                 )
@@ -1057,16 +1056,16 @@ if userge.has_bot:
                     ujson.dump(view_data, r, indent=4)
                 if str_x[0].lower() == "secret":
                     c_data = f"secret_{key_}"
-                    i_m_content = f"📩 <b>Secret Msg</b> for <b>{r_name}</b>. Only he/she can open it."
+                    i_m_content = f"📩 <b>Private Message</b> for <b>{r_name}</b>. Only he/she can open it."
                     i_l_des = f"Send Secret Message to: {r_name}"
                     title = "Send A Secret Message"
-                    thumb_img = "https://i.imgur.com/c5pZebC.png"
+                    thumb_img = "https://telegra.ph/file/c721706a1345728ef841b.jpg"
                 else:
                     c_data = f"troll_{key_}"
-                    i_m_content = f"😈 Only <b>{r_name}</b> can't view this message. UwU"
+                    i_m_content = f"😈 Blaah, Only <b>{r_name}</b> can't view this message. UwU"
                     i_l_des = f"Message Hidden from {r_name}"
                     title = "😈 Troll"
-                    thumb_img = "https://i.imgur.com/0vg5B0A.png"
+                    thumb_img = "https://telegra.ph/file/ffa8a4ac69d34c8b1de00.jpg"
                 buttons = [[InlineKeyboardButton("🔐  SHOW", callback_data=c_data)]]
                 results.append(
                     InlineQueryResultArticle(
@@ -1121,7 +1120,7 @@ if userge.has_bot:
                         InlineQueryResultPhoto(
                             photo_url=photo,
                             title=link,
-                            description="⬇️ Click to Download",
+                            description="Click to Download",
                             caption=caption,
                             reply_markup=buttons,
                         )
@@ -1139,10 +1138,10 @@ if userge.has_bot:
 
             MAIN_MENU = InlineQueryResultArticle(
                 title="Main Menu",
-                input_message_content=InputTextMessageContent(" 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 "),
-                url="https://github.com/code-rgb/USERGE-X",
-                description="Userge-X Main Menu",
-                thumb_url="https://i.imgur.com/1xsOo9o.png",
+                input_message_content=InputTextMessageContent("SML's UB #shamilnelli"),
+                url="t.me/shamilnelli",
+                description="SML x MWK",
+                thumb_url="https://telegra.ph/file/d3308b47f56930d891bdc.jpg",
                 reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
             )
             results.append(MAIN_MENU)
@@ -1159,6 +1158,6 @@ if userge.has_bot:
             await inline_query.answer(
                 results=results,
                 cache_time=1,
-                switch_pm_text=f"This bot is only for {owner_name}",
+                switch_pm_text=f"This is SML sir's Private Bot",
                 switch_pm_parameter="start",
             )
