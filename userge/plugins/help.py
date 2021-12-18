@@ -43,16 +43,16 @@ from .utils.notes import get_inote
 CHANNEL = userge.getCLogger(__name__)
 
 _CATEGORY = {
-    "admin": "⚜️",
-    "fun": "⚜️",
-    "misc": "⚜️",
-    "tools": "⚜️",
-    "utils": "⚜️",
-    "xtra": "⚜️",
-    "temp": "⚜️",
-    "plugins": "⚜️",
-    "bot": "⚜️",
-    "custom": "⚜️",
+    "admin": "🤓",
+    "fun": "🌝",
+    "misc": "🎯",
+    "tools": "🛠️",
+    "utils": "⚒️",
+    "xtra": "⚙️",
+    "temp": "📌",
+    "plugins": "🧲",
+    "bot": "🤖",
+    "custom": "✏️",
 }
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
@@ -212,7 +212,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = "SMLs MainMenu"
+            text = "Musk's MainMenu"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
