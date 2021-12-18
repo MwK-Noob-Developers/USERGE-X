@@ -94,7 +94,7 @@ async def kang_(message: Message):
         u_name = user.username
         u_name = "@" + u_name if u_name else user.first_name or user.id
         packname = f"a{user.id}_by_x_{pack}"
-        custom_packnick = f"@shamilnelli Sticker Pack"
+        custom_packnick = f"@EL0NMUZK Sticker Pack"
         packnick = f"{custom_packnick} Vol.{pack}"
         cmd = "/newpack"
         if resize:
